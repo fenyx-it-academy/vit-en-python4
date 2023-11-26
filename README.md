@@ -39,4 +39,4 @@ Write a program that allows the user to enter a text and then converts this text
 Entry a text: `Fenyx IT Academy`
 
 ### Sample Output:
-`Mors kodu:  ..-. . -. -.-- -..-  .. -  .- -.-. .- -.. . -- -.-- `            
+`Morse code:  ..-. . -. -.-- -..-  .. -  .- -.-. .- -.. . -- -.-- `            
