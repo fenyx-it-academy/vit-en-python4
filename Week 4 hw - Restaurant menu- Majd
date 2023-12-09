@@ -1,0 +1,38 @@
+my_menu = {
+    'Soup': 4.99,
+    'French Fries': 3.99,
+    'Cheese Burger': 7.99,
+    'Chicken Burger': 6.99,
+    'Fish Burger': 7.99,
+    'Coke': 2.99,
+}
+
+print("Welcome to the best restaurant on earth!")
+print("Menu:")
+for dish, price in my_menu.items():
+    print(f"{dish}: €{price:.2f}")
+
+orders_list = {}
+while True:
+    order_item = input("Add a dish from the menu to your order or type 'Done' to submit the order: \n")
+    if order_item == 'Done':
+        print('Thank you for your order.')
+        break
+    if order_item in my_menu:
+        if order_item in orders_list:
+            orders_list[order_item] += 1
+        else:
+            orders_list[order_item] = 1
+        print(f"{order_item} has been added to your order.")
+    else:
+        print(f'{order_item} is not on the menu. Please add items listed in the menu only.')
+
+print("\nYour Ordered:")
+total_price = 0.0
+for dish, quantity in orders_list.items():
+    dish_price = my_menu[dish] * quantity
+    total_price += dish_price
+    print(f"{dish} x{quantity}: ${dish_price:.2f}")
+
+print(f"\nTotal Price: ${total_price:.2f}")
+print("Thank you for ordering with us!")
